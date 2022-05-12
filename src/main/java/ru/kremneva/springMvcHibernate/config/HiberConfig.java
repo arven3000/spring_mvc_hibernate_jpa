@@ -25,8 +25,12 @@ import java.util.Properties;
 @EnableTransactionManagement
 @ComponentScan(value = "ru.kremneva.springMvcHibernate")
 public class HiberConfig {
+    private final Environment env;
+
     @Autowired
-    private Environment env;
+    public HiberConfig(Environment env) {
+        this.env = env;
+    }
 
     @Bean
     public DataSource getDataSource() {
