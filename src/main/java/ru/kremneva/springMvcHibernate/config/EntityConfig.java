@@ -24,11 +24,11 @@ import java.util.Properties;
 @PropertySource("classpath:db.properties")
 @EnableTransactionManagement
 @ComponentScan(value = "ru.kremneva.springMvcHibernate")
-public class HiberConfig {
+public class EntityConfig {
     private final Environment env;
 
     @Autowired
-    public HiberConfig(Environment env) {
+    public EntityConfig(Environment env) {
         this.env = env;
     }
 
